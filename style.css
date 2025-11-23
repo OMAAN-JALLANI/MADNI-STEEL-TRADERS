@@ -67,11 +67,20 @@ html, body {
 }
 
 /* --- 2. Logo --- */
+/* =========================================
+   LOGO SIZE ADJUSTMENT (BIGGER)
+   ========================================= */
+
+/* --- 1. Laptop / Desktop View --- */
 .logo-img {
-    height: 50px;
-    width: auto;
+    height: 90px;  /* Pehle 50px tha, ab 90px kar diya (Bara size) */
+    width: auto;   /* Width khud adjust hogi taake logo khinche na */
     display: block;
+    object-fit: contain; /* Logo ko clear rakhega */
+    transition: 0.3s ease; /* Smooth effect */
 }
+
+/* --- 2. Mobile View --- */
 
 /* --- 3. Links List (Desktop: Horizontal) --- */
 .nav-links-list {
@@ -192,6 +201,12 @@ html, body {
     /* 5. Logo Thora Chota */
     .logo-img {
         height: 60px; /* Mobile pe thora wazeh */
+    }
+}
+@media (max-width: 991px) {
+    .logo-img {
+        height: 85px; /* Mobile par bhi bara kar diya */
+        margin-bottom: 5px; /* Thora gap links se */
     }
 }
 /* WhatsApp Float Button */
