@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product-style.css">
+</head>
+<body>
+<style>
+    /* Color Palette provided by User */
+:root {
+    --primary-color: #747474; /* Greyish Navy */
+    --secondary-color: #f6f6f6; /* Light Grey */
+    --accent-color: #2c3e50; /* Dark Steel Grey */
+    --text-color: #333;
+    --white: #ffffff;
+    --highlight: #b92b27; /* Red for Price/Buttons to pop */
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    margin: 0;
+    font-family: var(--font-main);
+     margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+  
+.video-header {
+    position: relative;
+    /* Width ko 100% ki bajaye 100vw karein taake screen cover kare */
+    width: 100vw; 
+    height: 400px; /* Height thori barha di hai achi look ke liye */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+    margin-bottom: 60px;
+
+    /* === MAGIC TRICK FOR FULL WIDTH === */
+    /* Agar ye div kisi container ke andar bhi ho, tab bhi ye lines isay full screen kar dengi */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Video Settings */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video ko stretch hone se bachata hai */
+    z-index: 1;
+}
+
+/* Dark Filter Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Navy Blue aur Black ka mix gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(17, 17, 58, 0.6)); 
+    z-index: 2;
+}
+
+/* Text Styling */
+.header-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+    width: 100%; /* Content ko center rakhne ke liye */
+    max-width: 1200px; /* Text ziada fail na jaye */
+    animation: fadeIn 1.5s ease;
+}
+
+.header-content h2 {
+    font-size: 48px; /* Font size thora barhaya hai */
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #e0e0e0;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .video-header {
+        height: 300px; /* Mobile pe height kam */
+    }
+    .header-content h2 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .header-content p {
+        font-size: 14px;
+    }
+}
+/* GRID SETUP */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* === FLIP CARD CONTAINER === */
+.flip-card {
+    background-color: transparent;
+    height: 400px; /* Fixed height for consistency */
+    perspective: 1000px; /* Essential for 3D effect */
+    cursor: pointer;
+}
+
+/* === INNER CARD (Moves) === */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy smooth effect */
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+/* Hover Action */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* === FRONT & BACK COMMON === */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* === FRONT SIDE STYLING === */
+.flip-card-front {
+    background-color: var(--white);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 80%; /* Covers most of the card */
+    object-fit: cover;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.front-content {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    position: relative;
+}
+
+.front-content h3 {
+    margin: 0;
+    font-size: 22px;
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Badge Styling (e.g., Best Seller) */
+.badge {
+    position: absolute;
+    top: -20px;
+    background: var(--highlight);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* === BACK SIDE STYLING === */
+.flip-card-back {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    color: white;
+    transform: rotateY(180deg); /* Starts flipped */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.flip-card-back h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.price-tag {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 10px 0 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.price-tag small {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.specs li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.specs li i {
+    color: #4cd137; /* Green checkmark */
+}
+
+/* CTA Button */
+.order-btn {
+    background-color: var(--white);
+    color: var(--accent-color);
+    border: none;
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.order-btn:hover {
+    background-color: var(--highlight); /* Red hover */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .flip-card {
+        height: 350px;
+    }
+}
+</style>
+<!--footerrrrrr-->
+<style>
+    /* ============================
+   MODERN FOOTER STYLING
+   ============================ */
+
+.main-footer {
+    background-color: #1a1a1a; /* Dark background for footer */
+    color: #b0b0b0; /* Soft grey text */
+    padding-top: 70px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    border-top: 5px solid var(--accent-color, #2c3e50); /* Steel Accent top border */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px 50px 20px;
+}
+
+/* Headings */
+.footer-logo {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--highlight, #b92b27); /* Red accent line */
+}
+
+.footer-col p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Links Styling */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 5px; /* Slide effect */
+}
+
+/* Contact List specific */
+.contact-list li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-list i {
+    color: var(--highlight, #b92b27); /* Icon color */
+    margin-top: 5px;
+}
+
+/* Social Icons */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--highlight, #b92b27);
+    transform: translateY(-3px);
+}
+
+/* ============================
+   POWERED BY CODEDCLOUDS
+   ============================ */
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* CodedClouds Link Styling */
+.developer-link {
+    font-weight: 500;
+}
+
+.developer-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Cool gradient for CodedClouds */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.developer-link a i {
+    -webkit-text-fill-color: initial; /* Keep icon color solid if needed, or gradient */
+    color: #00f2fe;
+    font-size: 12px;
+}
+
+.developer-link a:hover {
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.6); /* Glow effect */
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+</style>
+<section class="product-section">
+    <div class="section-header video-header">
+    
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="../Images/pv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="header-content">
+        <h2>Premium Steel Products</h2>
+        <p>Top Quality Construction Material at Market Competitive Rates</p>
+    </div>
+
+</div>
+
+    <div class="product-grid">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/steel.jpg" alt="Grade 60 Steel"> <div class="front-content">
+                        <h3>Grade 60 Steel</h3>
+                        <span class="badge">Best Seller</span>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Grade 60 Steel</h3>
+                    <div class="price-tag">Rs. 265 <small>/kg</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> ASTM A615 Standard</li>
+                        <li><i class="fa-solid fa-check"></i> High Tensile Strength</li>
+                        <li><i class="fa-solid fa-check"></i> Earthquake Resistant</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/steel2.jpg" alt="Grade 40 Steel">
+                    <div class="front-content">
+                        <h3>Grade 40 Steel</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Grade 40 Steel</h3>
+                    <div class="price-tag">Rs. 255 <small>/kg</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Excellent Flexibility</li>
+                        <li><i class="fa-solid fa-check"></i> Perfect for Housing</li>
+                        <li><i class="fa-solid fa-check"></i> Rust Resistant</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/steel3.jpg" alt="Cement">
+                    <div class="front-content">
+                        <h3>Premium Cement</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>DG / Maple Leaf</h3>
+                    <div class="price-tag">Rs. 1250 <small>/bag</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Quick Setting</li>
+                        <li><i class="fa-solid fa-check"></i> High Durability</li>
+                        <li><i class="fa-solid fa-check"></i> Fresh Stock</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/steel4.jpg" alt="Girders">
+                    <div class="front-content">
+                        <h3>T-Iron & Girders</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Heavy Girders</h3>
+                    <div class="price-tag">Rs. 270 <small>/kg</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Roof Structure</li>
+                        <li><i class="fa-solid fa-check"></i> Customized Lengths</li>
+                        <li><i class="fa-solid fa-check"></i> Heavy Gauge</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/story.png" alt="Steel Sheets">
+                    <div class="front-content">
+                        <h3>Steel Sheets</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Cold Rolled Sheets</h3>
+                    <div class="price-tag">Call for Rate</div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Gates & Doors</li>
+                        <li><i class="fa-solid fa-check"></i> Various Thickness</li>
+                        <li><i class="fa-solid fa-check"></i> Smooth Finish</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/p1.png" alt="Binding Wire">
+                    <div class="front-content">
+                        <h3>Binding Wire</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Steel Wire</h3>
+                    <div class="price-tag">Rs. 300 <small>/kg</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Soft & Strong</li>
+                        <li><i class="fa-solid fa-check"></i> Easy to Twist</li>
+                        <li><i class="fa-solid fa-check"></i> No Breakage</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../Images/p2.png  " alt="Angle Iron">
+                    <div class="front-content">
+                        <h3>Angle Iron</h3>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Structural Angles</h3>
+                    <div class="price-tag">Rs. 260 <small>/kg</small></div>
+                    <ul class="specs">
+                        <li><i class="fa-solid fa-check"></i> Accurate 90°</li>
+                        <li><i class="fa-solid fa-check"></i> For Framing</li>
+                        <li><i class="fa-solid fa-check"></i> Industrial Use</li>
+                    </ul>
+                    <button class="order-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--foterrrrrrrrrrrrrr-->
+<footer class="main-footer">
+    <div class="footer-content">
+        
+        <div class="footer-col">
+            <h3 class="footer-logo">MADNI STEEL</h3>
+            <p>Building the nation with strength and trust. We provide premium quality steel, cement, and construction materials at the best market rates.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Get Quote</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <a href="tel:+923001234567">+92 300 123 4567</a><br>
+                        <a href="tel:+923211234567">+92 321 123 4567</a>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@madnisteel.com">info@madnisteel.com</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Main Iron Market, Multan, Pakistan</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Madni Steel Traders. All Rights Reserved.</p>
+        <p class="developer-link">
+            Powered by 
+            <a href="https://codedclouds.com" target="_blank" title="Visit CodedClouds">
+                CODEDCLOUDS <i class="fa-solid fa-bolt"></i>
+            </a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madni Steel Traders</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkTtD1Fp5lJnp4JwXrj5qK2gS39G1JQ8qVZ+4N1F5QkGPHqNq6Vb9anfg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar custom-navbar">
+  <div class="container-fluid main-nav-container">
+    
+    <a class="navbar-brand logo-wrapper" href="#">
+      <img src="./Images/logo.png" alt="Madni Steel" class="logo-img">
+    </a>
+
+    <ul class="nav-links-list">
+        <li>
+             <a class="nav-link custom-link" href="./components/Product.html">OUR PRODUCTS</a>
+        </li>
+        <li>
+             <button class="btn nav-link custom-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHelp">SECTORS</button>
+        </li>
+        <li>
+             <button class="btn nav-link custom-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWho">ABOUT US</button>
+        </li>
+        <li>
+             <a href="./components/Calculator.html"><button class="btn nav-link custom-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasJoin">CALCULATOR</button></a>
+        </li>
+    </ul>
+
+    <div class="nav-buttons-group">
+        <a href="#service" class="btn-wrapper">
+            <button class="btn nav-btn-outline">CURRENT RATES</button>
+        </a>
+        <a href="#contact" class="btn-wrapper">
+            <button class="btn nav-btn-solid">GET A QUOTE</button>
+        </a>
+    </div>
+
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <a href="https://wa.me/+923036999961" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+          
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+ 
+<section class="hero-section" data-aos="fade-up">
+  <video autoplay muted loop class="hero-video">
+    <source src="./Images/bg.mp4" type="video/mp4"> 
+    Your browser does not.
+  </video>
+
+  
+  <div class="overlay"></div>
+
+  
+  <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+    <h1>Building Stronger Foundations</h1>
+    <p>Premium Quality Grade 60 & 40 Steel · Cement · Girders · T-Iron · Construction Materials</p>
+    <a href="#unique-contact-section"style="text-decoration: none; "><button class="btn btn-primary btn-lg" id="get-in-touch">Order Now</button></a>
+  </div>
+</section>
+
+ 
+<section class="services-section" id="service" data-aos="fade-up">
+  <h2 class="services-title">Premium Construction Materials</h2>
+
+  <div class="services-grid">
+      
+    <div class="service-card card-1" data-aos="fade-left">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">GRADE 60 STEEL</span>
+    </div>
+
+    <div class="service-card card-2" data-aos="fade-up">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">GRADE 40 STEEL</span>
+    </div>
+ 
+    <div class="service-card card-3" data-aos="fade-right">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">CEMENT & BRICKS</span>
+    </div>
+
+    <div class="service-card card-4" data-aos="fade-left">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">T-IRON & GIRDERS</span>
+    </div>
+
+    <div class="service-card extra-service card-5 d-none" data-aos="fade-right">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">ALUMINIUM & GLASS</span>
+    </div>
+
+    <div class="service-card extra-service card-6 d-none">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">ROOFING SHEETS</span>
+    </div>
+
+    <div class="service-card extra-service card-7 d-none">
+      <div class="service-bg"></div>
+      <div class="service-overlay"></div>
+      <span class="service-name">WHOLESALE SUPPLY</span>
+    </div>
+  </div>
+
+  <div class="services-actions">
+    <a href="./components/Product.html" ><button id="viewMoreBtn" class="btn btn-primary"  data-aos="fade-up">View More Products</button></a>
+    <style>
+        #viewMoreBtn {
+    background-color: var(--primary-color, #11113a); /* Navy Blue */
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 40px;
+    border: 2px solid var(--primary-color, #11113a);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover Effect (Red Color) */
+#viewMoreBtn:hover {
+    background-color: var(--accent-color, #b92b27); /* Red */
+    border-color: var(--accent-color, #b92b27);
+    transform: translateY(-3px); /* Thora upar uthay ga */
+    box-shadow: 0 8px 15px rgba(185, 43, 39, 0.3); /* Red glow */
+}
+
+/* Anchor Tag Fix (Link ki line hatane k liye) */
+.services-actions a {
+    text-decoration: none;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (Button Fix)
+   ========================================= */
+@media (max-width: 768px) {
+    .services-actions {
+        margin-top: 20px;
+    }
+
+    #viewMoreBtn {
+        font-size: 13px;
+        padding: 12px 30px; /* Mobile pe thora chota */
+        width: 80%; /* Screen ka 80% hissa le ga */
+        max-width: 250px; /* Ziada bara na ho */
+    }
+}
+    </style>
+    <button id="viewLessBtn" class="btn btn-outline-secondary d-none" data-aos="fade-up">View Less</button>
+  </div>
+</section>
+
+<section class="industries-section" data-aos="fade-up">
+  
+  <h2 class="industries-title" data-aos="fade-left">Serving Every Construction Sector</h2>
+
+  <div class="industries-grid">
+    
+    <div class="industry-item">
+      <div class="industry-text" data-aos="fade-right">
+        <i class="fa-solid fa-house-chimney"></i> Residential Housing
+      </div>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-text" data-aos="fade-left">
+        <i class="fa-solid fa-building"></i> Commercial Plazas
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-right">
+        <i class="fa-solid fa-landmark"></i> Government Projects
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-left">
+        <i class="fa-solid fa-industry"></i> Industrial Factories
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-right">
+        <i class="fa-solid fa-bridge"></i> Bridges & Roads
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-left">
+        <i class="fa-solid fa-bag-shopping"></i> Shopping Malls
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-right">
+        <i class="fa-solid fa-warehouse"></i> Warehouses
+      </div>
+    </div>
+
+    <div class="industry-item"> 
+      <div class="industry-text" data-aos="fade-left">
+        <i class="fa-solid fa-graduation-cap"></i> Educational Institutes
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+ 
+<section class="section gallery-section">
+  
+  <div class="left-text" data-aos="fade-right">
+    <h1>Project Gallery</h1>
+    <p>Discover the landmarks built with Madni Steel. From high-rise buildings to secure homes, our steel provides the strength that lasts for generations.</p>
+    <a href="#contact" class="gallery-btn">View All Projects &rarr;</a>
+  </div>
+
+  <div class="right-cards">
+    
+    <div class="gallery-card card-1" data-aos="fade-left" data-aos-delay="100">
+      <div class="overlay"></div>
+      <h3>HOUSING SOCIETIES</h3>
+    </div>
+
+    <div class="gallery-card card-2" data-aos="fade-left" data-aos-delay="200">
+      <div class="overlay"></div>
+      <h3>HIGH RISE BUILDINGS</h3>
+    </div>
+
+    <div class="gallery-card card-3" data-aos="fade-left" data-aos-delay="300">
+      <div class="overlay"></div>
+      <h3>INFRASTRUCTURE</h3>
+    </div>
+
+    <div class="gallery-card card-4" data-aos="fade-left" data-aos-delay="400">
+      <div class="overlay"></div>
+      <h3>FACTORIES & PLANTS</h3>
+    </div>
+
+    <div class="gallery-card card-5" data-aos="fade-left" data-aos-delay="500">
+      <div class="overlay"></div>
+      <h3>EDUCATIONAL INSTITUTES</h3>
+    </div>
+
+    <div class="gallery-card card-6" data-aos="fade-left" data-aos-delay="600">
+      <div class="overlay"></div>
+      <h3>HOSPITALS</h3>
+    </div>
+
+  </div>
+</section>
+
+<section class="achievements-section" id="activements">
+  <div class="achievements-left">
+    <h1>Quality You Can Trust</h1>
+    <h2>Madni Steel's Milestones</h2>
+    <p>We take pride in empowering the construction industry with certified steel and building materials.<br><br>
+    Madni Steel Traders brings a commitment to weight accuracy and timely delivery.</p>
+  </div>
+
+  <div class="achievements-right">
+    <div class="stat-row">
+      <div class="stat">
+        <span class="number" data-aos="fade-left">250+</span>
+        <span class="desc">Projects Supplied</span>
+      </div>
+      <div class="stat">
+        <span class="number" data-aos="fade-left">7+</span>
+        <span class="desc">Cities Served</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="number" data-aos="fade-left">25+</span>
+        <span class="desc">Happy Customers</span>
+      </div>
+      <div class="stat">
+        <span class="number" data-aos="fade-left">5+</span>
+        <span class="desc">Years of Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="careers-section">
+  <div class="careers-left">
+    <video autoplay muted loop playsinline width="100%" style="border-radius: 15px;">
+      <source src="./Images/story.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="careers-right">
+    <h1>Become a Partner</h1>
+    <p><strong style="background: none;">Strength is our foundation.</strong><br>
+    Join our network of dealers, contractors, and builders for special rates.</p>
+    <a href="#contact" style="text-decoration: none; width: 150px;" data-aos="fade-up"><button class="join-btn">Contact Us</button></a>
+  </div>
+  
+<div id="unique-contact-section" style="font-family: 'Montserrat', sans-serif; background-color: #fff; overflow-x: hidden; width: 100%; box-sizing: border-box;">
+        
+        <section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 60px; padding: 80px 5%; max-width: 1400px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+            
+             
+            <div class="contact-left-col" data-aos="fade-up" style="flex: 2; min-width: 320px; box-sizing: border-box;">
+                <h1 style="font-size: 36px; margin: 0 0 10px 0; color: rgb(17, 17, 58); font-weight: 800; line-height: 1.2;">Get a Price Quote</h1>
+                <p style="font-size: 16px; margin: 0 0 30px 0; color: #666; line-height: 1.6; font-weight: 500;">Fill out the form below with your requirements and we will send you the latest rates.</p>
+
+                <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px; background: #fff; box-sizing: border-box;">
+                    
+                    
+                    <input type="hidden" name="selected_services" id="selected_services">
+
+                    
+                    <div style="box-sizing: border-box;">
+                        <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Full Name <span style="color: red;">*</span></label>
+                        <input type="text" name="full_name" placeholder="Your Name" required style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; transition: all 0.3s ease; box-sizing: border-box;">
+                    </div>
+
+                  
+                    <div style="box-sizing: border-box;">
+                        <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Email (Optional)</label>
+                        <input type="email" name="user_email" placeholder="email@company.com" style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; transition: all 0.3s ease; box-sizing: border-box;">
+                    </div>
+
+                      
+                    <div style="box-sizing: border-box;">
+                        <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Phone Number <span style="color: red;">*</span></label>
+                        <div style="display: flex; gap: 10px; box-sizing: border-box;">
+                            <select name="country_code" required style="width: 30%; min-width: 100px; padding: 12px 10px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; box-sizing: border-box;">
+                                <option value="+92">PK +92</option>
+                                <option value="+966">SA +966</option>
+                                <option value="+1">US +1</option>
+                                <option value="+44">UK +44</option>
+                                <option value="+971">UAE +971</option>
+                            </select>
+                            <input type="tel" name="phone_number" placeholder="300 123 4567" required style="width: 70%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; transition: all 0.3s ease; box-sizing: border-box;">
+                        </div>
+                    </div>
+
+                    <div style="box-sizing: border-box;">
+                        <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Construction Site Location <span style="color: red;">*</span></label>
+                        <input type="text" name="company_name" placeholder="e.g. DHA Phase 6, Multan" required style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; transition: all 0.3s ease; box-sizing: border-box;">
+                    </div>
+
+                    
+                    <div style="box-sizing: border-box;">
+                        <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Products required: <span style="color: red;">*</span></label>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 5px; box-sizing: border-box;">
+                            
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="Grade 60 Steel" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> Grade 60 Saria
+                            </label>
+
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="Grade 40 Steel" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> Grade 40 Saria
+                            </label>
+
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="Cement" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> Cement
+                            </label>
+
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="T-Iron Girders" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> T-Iron / Girders
+                            </label>
+
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="Wholesale" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> Wholesale Bulk
+                            </label>
+
+                            <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid transparent; transition: 0.3s; box-sizing: border-box;">
+                                <input type="checkbox" value="Bricks" class="service-chk" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58); margin: 0;"> Bricks
+                            </label>
+
+                             
+                        </div>
+                    </div>
+                    
+                   
+                    <div style="box-sizing: border-box;">
+                         <label style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 58); margin-bottom: 8px; display: block;">Message / Quantity Required</label>
+                         <textarea name="message" rows="4" placeholder="e.g. I need 5 tons of Grade 60 steel..." style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; background: #f8f9fa; font-size: 15px; font-family: 'Montserrat', sans-serif; outline: none; color: #333; transition: all 0.3s ease; box-sizing: border-box;"></textarea>
+                    </div>
+
+                      
+                    <div style="margin-top: 10px; box-sizing: border-box;">
+                        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: #444; cursor: pointer; background: none; padding: 0; box-sizing: border-box;">
+                            <input type="checkbox" name="urgent" value="Yes" style="width: 18px; height: 18px; cursor: pointer; accent-color: rgb(17, 17, 58);"> 
+                            <strong>This is an Urgent Order</strong>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" style="background: rgb(17, 17, 58); color: #fff; font-size: 16px; font-weight: 700; padding: 15px 40px; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; align-self: flex-start; font-family: 'Montserrat', sans-serif;">Submit Order</button>
+                    <div id="status-message" style="margin-top: 15px; font-size: 15px; font-weight: 600;"></div>
+                </form>
+            </div>
+
+             
+            <div class="contact-right-col" data-aos="fade-left" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 40px; padding-top: 20px; position: sticky; top: 20px; box-sizing: border-box;">
+                
+                <div style="padding-left: 25px; border-left: 5px solid rgb(17, 17, 58); box-sizing: border-box;">
+                    <h2 style="font-size: 14px; color: rgb(17, 17, 58); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px 0; font-weight: 700;">Head Office</h2>
+                    <h3 style="font-size: 26px; margin: 0 0 15px 0; font-weight: 800; color: #222;">Visit Us</h3>
+                    <p style="font-size: 15px; margin-bottom: 15px; color: #555; line-height: 1.6; font-weight: 500;">Main Iron Market, [Your City], Pakistan.</p>
+                    <a href="#" class="learn-btn" style="display: inline-flex; align-items: center; gap: 8px; color: rgb(17, 17, 58); text-decoration: none; font-weight: 700; font-size: 14px; transition: gap 0.3s ease; text-transform: uppercase;">Get Directions <span>&rarr;</span></a>
+                </div>
+
+                <div style="padding-left: 25px; border-left: 5px solid rgb(17, 17, 58); box-sizing: border-box;">
+                    <h2 style="font-size: 14px; color: rgb(17, 17, 58); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px 0; font-weight: 700;">Support</h2>
+                    <h3 style="font-size: 26px; margin: 0 0 15px 0; font-weight: 800; color: #222;">Call Us</h3>
+                    <p style="font-size: 15px; margin-bottom: 15px; color: #555; line-height: 1.6; font-weight: 500;">For urgent orders and rate inquiries, call our hotline.</p>
+                    <a href="#" class="learn-btn" style="display: inline-flex; align-items: center; gap: 8px; color: rgb(17, 17, 58); text-decoration: none; font-weight: 700; font-size: 14px; transition: gap 0.3s ease; text-transform: uppercase;">Call Now <span>&rarr;</span></a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+ <!--footerrrrrr-->
+ <footer class="main-footer">
+    <div class="footer-content">
+        
+        <div class="footer-col">
+            <h3 class="footer-logo">MADNI STEEL</h3>
+            <p>Building the nation with strength and trust. We provide premium quality steel, cement, and construction materials at the best market rates.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Get Quote</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <a href="tel:+923001234567">+92 300 123 4567</a><br>
+                        <a href="tel:+923211234567">+92 321 123 4567</a>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@madnisteel.com">info@madnisteel.com</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Main Iron Market, Multan, Pakistan</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Madni Steel Traders. All Rights Reserved.</p>
+        <p class="developer-link">
+            Powered by 
+            <a href="https://codedclouds.com" target="_blank" title="Visit CodedClouds">
+                CODEDCLOUDS <i class="fa-solid fa-bolt"></i>
+            </a>
+        </p>
+    </div>
+</footer>
+<style>
+    /* =========================================
+   FOOTER STYLING (MOBILE FIXED)
+   ========================================= */
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: #b0b0b0;
+    padding-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    border-top: 5px solid var(--accent-color, #2c3e50);
+    width: 100%;          /* Full width */
+    overflow: hidden;     /* ZAROORI: Taake side se bahar na nikle */
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Auto fit columns (Desktop pe side-by-side, mobile pe neeche) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px 50px 20px;
+}
+
+/* --- HEADINGS --- */
+.footer-logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block; /* Mobile centering k liye zaroori */
+}
+
+/* Red line under headings */
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background-color: #b92b27; /* Red color */
+}
+
+.footer-col p {
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* --- LINKS --- */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* --- SOCIAL ICONS --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #b92b27;
+    transform: translateY(-3px);
+}
+
+/* --- CONTACT LIST --- */
+.contact-list li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-list i {
+    color: #b92b27;
+    margin-top: 5px;
+}
+
+/* =========================================
+   POWERED BY SECTION (BOTTOM BAR)
+   ========================================= */
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap; /* Mobile pe toot ke neeche aye */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+/* CodedClouds Link Style */
+.developer-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    /* Gradient Text */
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE TWEAKS (Yahan Asal Fix Hai)
+   ========================================= */
+
+@media (max-width: 768px) {
+    
+    .footer-content {
+        /* Mobile pe single column ho jaye */
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Heading underline ko center karna */
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Contact icons aur text ko center align karna */
+    .contact-list li {
+        justify-content: center; /* Center align */
+        flex-direction: column;  /* Icon upar text neeche */
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Social icons ko center karna */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Bottom Bar Fix */
+    .footer-bottom {
+        flex-direction: column; /* Upar neeche */
+        gap: 15px;
+        text-align: center;
+    }
+}
+</style>
+<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasDo" aria-labelledby="offcanvasDoLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasDoLabel">WHAT WE SUPPLY</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body offcanvas-content">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Steel Products</h4>
+            <ul>
+                <li>Grade 60 Deformed Bars</li>
+                <li>Grade 40 Steel Bars</li>
+                <li>Cold Twisted Bars</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Structural Steel</h4>
+            <ul>
+                <li>I-Beams & Girders</li>
+                <li>T-Iron</li>
+                <li>Channels & Angles</li>
+                <li>Steel Sheets</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Construction Material</h4>
+            <ul>
+                <li>Cement (All Brands)</li>
+                <li>Gravel & Sand</li>
+                <li>Aluminium Windows</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasHelp" aria-labelledby="offcanvasHelpLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasHelpLabel">SECTORS WE SERVE</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body offcanvas-content">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Construction Industries</h4>
+            <p>We empower contractors across Residential, Commercial, and Industrial sectors with high-quality materials.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Our Partners</h4>
+            <ul>
+                <li>Private Home Builders</li>
+                <li>Large Scale Contractors</li>
+                <li>Government Infrastructure</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasWho" aria-labelledby="offcanvasWhoLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWhoLabel">WHO WE ARE</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body offcanvas-content">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>About Madni Steel</h4>
+            <p>Madni Steel Traders is a premier steel supplier in <strong>Pakistan</strong>. We are a team of dedicated professionals ensuring you get the exact weight and best quality.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Our Mission</h4>
+            <p>To provide strength to the nation's infrastructure with uncompromised quality.</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
